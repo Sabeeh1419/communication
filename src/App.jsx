@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import './app.css';
+import './App.css';
+import 'index.css';
 
 function App() {
   const [projects, setProjects] = useState([]);
