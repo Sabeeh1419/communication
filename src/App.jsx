@@ -8,7 +8,7 @@ function App() {
   const [newProjectDescription, setNewProjectDescription] = useState('');
   const [error, setError] = useState('');
 
-  const apiUrl = 'https://myproject-data.netlify.app/api/projects';
+  const apiUrl = 'http://localhost:5000/api/projects';
 
   const fetchProjects = async () => {
     try {
