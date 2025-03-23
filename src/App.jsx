@@ -8,7 +8,7 @@ function App() {
   const [newProjectDescription, setNewProjectDescription] = useState('');
   const [error, setError] = useState('');
 
-  const apiUrl = 'https://backend-of-projects.vercel.app/api/projects';
+  const apiUrl = 'http://https://myproject-data.netlify.app//api/projectsy';
 
   const fetchProjects = async () => {
     try {
