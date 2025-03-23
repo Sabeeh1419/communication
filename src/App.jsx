@@ -8,7 +8,7 @@ function App() {
   const [newProjectDescription, setNewProjectDescription] = useState('');
   const [error, setError] = useState('');
 
-  const apiUrl = 'http://localhost:5000/api/projects';
+  const apiUrl = 'https://backend-of-projects.vercel.app/api/projects';
 
   const fetchProjects = async () => {
     try {
