@@ -1,259 +1,127 @@
-/* General Styles */
-body {
-  font-family: 'Inter', Arial, sans-serif;
-  background-color: #f8f9fa;
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-.app {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-/* Title */
-.app-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #2d3748;
-  text-align: center;
-  margin-bottom: 30px;
-  letter-spacing: -0.05em;
-}
-
-/* Error Message */
-.error-message {
-  background-color: #fff5f5;
-  border: 1px solid #fc8181;
-  color: #c53030;
-  padding: 12px;
-  border-radius: 8px;
-  margin-bottom: 20px;
-  text-align: center;
-  font-size: 0.9rem;
-}
-
-/* Form Container */
-.form-container {
-  background-color: #ffffff;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin-bottom: 25px;
-}
-
-.form-input {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #e2e8f0;
-  border-radius: 8px;
-  font-size: 1rem;
-  margin-bottom: 15px;
-  transition: border-color 0.3s ease;
-}
-
-.form-input:focus {
-  border-color: #4299e1;
-  outline: none;
-}
-
-textarea.form-input {
-  resize: vertical;
-  min-height: 120px;
-}
-
-.form-button {
-  width: 100%;
-  padding: 12px;
-  background-color: #4299e1;
+.app-header {
+  background-color: #2c3e50;
   color: white;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  padding: 1rem 2rem;
 }
 
-.form-button:hover {
-  background-color: #3182ce;
-}
-
-/* Projects List */
-.projects-list {
-  background-color: #ffffff;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.list-title {
-  font-size: 1.75rem;
-  font-weight: 700;
-  color: #2d3748;
-  margin-bottom: 20px;
-  letter-spacing: -0.03em;
-}
-
-.project-item {
+.main-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px;
-  background-color: #f8fafc;
-  border-radius: 8px;
-  margin-bottom: 12px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.project-item:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.nav-logo {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
 }
 
-.project-details {
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #3498db;
+}
+
+.app-main {
   flex: 1;
+  padding: 2rem;
 }
 
-.project-name {
-  font-size: 1.1rem;
-  color: #2d3748;
-  font-weight: 600;
-  margin-bottom: 5px;
-}
-
-.project-description {
-  font-size: 0.9rem;
-  color: #4a5568;
-  margin-top: 5px;
-}
-
-.delete-button {
-  padding: 8px 16px;
-  background-color: #e53e3e;
+.app-footer {
+  background-color: #2c3e50;
   color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.delete-button:hover {
-  background-color: #c53030;
-}
-
-/* Refresh Button */
-.refresh-container {
   text-align: center;
-  margin-top: 25px;
+  padding: 1rem;
 }
 
-.refresh-button {
-  padding: 12px 24px;
-  background-color: #48bb78;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+.back-home {
+  color: #3498db;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 0.5rem;
 }
 
-.refresh-button:hover {
-  background-color: #38a169;
+.back-home:hover {
+  text-decoration: underline;
 }
-/* Add these to your existing CSS */
-.edit-button {
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  padding: 8px 16px;
-  margin-right: 5px;
-  cursor: pointer;
-  border-radius: 6px;
-}
-
-.edit-button:hover {
-  background-color: #45a049;
-}
-
-.save-button {
-  background-color: #2196F3;
-  color: white;
-  border: none;
-  padding: 5px 10px;
-  margin-right: 5px;
-  cursor: pointer;
-  border-radius: 3px;
-}
-
-.save-button:hover {
-  background-color: #0b7dda;
-}
-
-.cancel-button {
-  background-color: #f44336;
-  color: white;
-  border: none;
-  padding: 5px 10px;
-  cursor: pointer;
-  border-radius: 3px;
-}
-
-.cancel-button:hover {
-  background-color: #da190b;
-}
-
-.edit-form {
+.main-nav {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
-.edit-buttons {
+.nav-links {
   display: flex;
-  gap: 10px;
+  gap: 1.5rem;
 }
 
-.project-actions {
-  margin-top: 10px;
-}
-/* Animations */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  position: relative;
+  transition: color 0.3s ease;
 }
 
-.project-item {
-  animation: fadeIn 0.5s ease;
+.nav-link:hover {
+  color: #a5b4fc;
 }
 
-/* Responsive Design */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #a5b4fc;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-logo {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
 @media (max-width: 768px) {
-  .app {
-    padding: 15px;
+  .nav-links {
+    gap: 1rem;
   }
-
-  .app-title {
-    font-size: 2rem;
-  }
-
-  .form-container,
-  .projects-list {
-    padding: 20px;
-  }
-
-  .form-input,
-  .form-button,
-  .delete-button,
-  .refresh-button {
+  
+  .nav-link {
     font-size: 0.9rem;
+  }
+  
+  .nav-logo {
+    font-size: 1.3rem;
   }
 }

@@ -163,7 +163,62 @@ textarea.form-input {
 .refresh-button:hover {
   background-color: #38a169;
 }
+/* Add these to your existing CSS */
+.edit-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  margin-right: 5px;
+  cursor: pointer;
+  border-radius: 6px;
+}
 
+.edit-button:hover {
+  background-color: #45a049;
+}
+
+.save-button {
+  background-color: #2196F3;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  margin-right: 5px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.save-button:hover {
+  background-color: #0b7dda;
+}
+
+.cancel-button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.cancel-button:hover {
+  background-color: #da190b;
+}
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.edit-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.project-actions {
+  margin-top: 10px;
+}
 /* Animations */
 @keyframes fadeIn {
   from {

@@ -1,0 +1,265 @@
+/* Projects Table Page Styles */
+.table-page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    min-height: calc(100vh - 120px);
+  }
+  
+  .table-page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .table-page-header h1 {
+    color: #2c3e50;
+    font-size: 2rem;
+    margin: 0;
+  }
+  
+  .card-view-btn {
+    background-color: #4361ee;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .card-view-btn:hover {
+    background-color: #3a56d4;
+  }
+  
+  .card-view-btn i {
+    font-size: 1rem;
+  }
+  
+  .loading {
+    text-align: center;
+    padding: 2rem;
+    color: #6c757d;
+    font-size: 1.1rem;
+  }
+  
+  .alert.error {
+    background-color: #ffebee;
+    color: #c62828;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid #c62828;
+  }
+  
+  /* Table Styles */
+  .projects-table-container {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 1.5rem;
+    overflow: hidden;
+  }
+  
+  .table-responsive {
+    overflow-x: auto;
+  }
+  
+  .projects-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+  }
+  
+  .projects-table thead {
+    background-color: #f8f9fa;
+  }
+  
+  .projects-table th {
+    color: #495057;
+    font-weight: 600;
+    text-align: left;
+    padding: 1rem;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+  }
+  
+  .projects-table td {
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+    vertical-align: middle;
+    color: #495057;
+  }
+  
+  .projects-table tr:last-child td {
+    border-bottom: none;
+  }
+  
+  .projects-table tr:hover {
+    background-color: #f8fafc;
+  }
+  
+  .project-name-cell {
+    display: flex;
+    align-items: center;
+  }
+  
+  .project-name {
+    font-weight: 600;
+    color: #4361ee;
+  }
+  
+  /* For table view descriptions */
+.description-cell {
+    max-width: 300px;
+    white-space: normal; /* Changed from nowrap to normal */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  
+  .actions-cell {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .table-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: white;
+    font-size: 0.8rem;
+  }
+  
+  .table-btn:hover {
+    transform: scale(1.1);
+  }
+  
+  .edit-btn {
+    background-color: #4895ef;
+  }
+  
+  .delete-btn {
+    background-color: #f72585;
+  }
+  
+  .no-projects td {
+    text-align: center;
+    padding: 2rem;
+    color: #6c757d;
+  }
+  /* Add to existing CSS */
+.fa-spinner {
+    margin-right: 0.5rem;
+  }
+  
+  .alert.error button,
+  .no-projects button {
+    background: none;
+    border: none;
+    color: inherit;
+    text-decoration: underline;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 0.5rem;
+  }
+  
+  .alert.error button:hover,
+  .no-projects button:hover {
+    color: #4361ee;
+  }
+  
+  /* Add these styles to your existing CSS */
+.edit-btn {
+    background-color: #4895ef;
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    border-radius: full;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .edit-btn:hover {
+    background-color: #3a7bc8;
+  }
+  
+  .edit-btn i {
+    font-size: 14px;
+  }
+  
+  /* Make sure buttons are properly spaced */
+  .actions-cell {
+    display: flex;
+    gap: 8px;
+  }
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .table-page-container {
+      padding: 1.5rem;
+    }
+    
+    .table-page-header h1 {
+      font-size: 1.5rem;
+    }
+    
+    .card-view-btn {
+      padding: 0.6rem 1rem;
+      font-size: 0.9rem;
+    }
+    
+    .projects-table {
+      min-width: 600px;
+    }
+    
+    .projects-table th {
+      padding: 0.75rem;
+    }
+    
+    .projects-table td {
+      padding: 0.75rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .table-page-container {
+      padding: 1rem;
+    }
+    
+    .table-page-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    .description-cell {
+      max-width: 200px;
+    }
+  }
+  
+  @media (max-width: 320px) {
+    .projects-table th,
+    .projects-table td {
+      padding: 0.5rem;
+    }
+    
+    .table-btn {
+      width: 28px;
+      height: 28px;
+    }
+  }
