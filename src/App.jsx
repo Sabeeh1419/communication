@@ -18,6 +18,7 @@ function App() {
       }
       const data = await response.json();
       setProjects(data);
+      // console.log('Fetched projects:', data[0]._id); // Debugging
       setError('');
     } catch (err) {
       setError('Failed to fetch projects');
@@ -62,6 +63,7 @@ function App() {
 
   const deleteProject = async (id) => {
     try {
+      console.log('Deleting project with id:', id); // Debugging
       const response = await fetch(`${apiUrl}/${id}`, {
         method: 'DELETE',
       });
@@ -113,7 +115,7 @@ function App() {
           <span className="project-description">{project.description}</span>
         </div>
         <button
-          onClick={() => deleteProject(project.id)}
+          onClick={() => deleteProject(project._id)}
           className="delete-button"
         >
           Delete
