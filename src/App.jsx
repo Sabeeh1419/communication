@@ -1,24 +1,27 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import ProjectsDashboard from './ProjectsDashboard';
 import HomePage from './HomePage';
-import './App.css';
 import ProjectsTablePage from './ProjectsTablePage';
 import EditProjectPage from './EditProjectPage';
+import LargeScreenNav from './LargeScreenNavbar';
+import SmallScreenNav from './SmallScreenNavbar';
+import './App.css';
 
 function App() {
+  const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth > 768);
+
+  useEffect(() => {
+    const handleResize = () => setIsLargeScreen(window.innerWidth > 768);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <Router>
       <div className="app-container">
         <header className="app-header">
-          <nav className="main-nav">
-            <Link to="/" className="nav-logo">Project Manager</Link>
-            <div className="nav-links">
-              <Link to="/" className="nav-link">Home</Link>
-              <Link to="/projects" className="nav-link">Projects</Link>
-              <Link to="/projects-table" className="nav-link">Data View</Link>
-            </div>
-          </nav>
+          {isLargeScreen ? <LargeScreenNav /> : <SmallScreenNav />}
         </header>
 
         <main className="app-main">

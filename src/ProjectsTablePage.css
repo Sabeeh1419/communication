@@ -212,7 +212,7 @@
   /* Responsive Styles */
   @media (max-width: 768px) {
     .table-page-container {
-      padding: 1.5rem;
+      padding: 1rem;
     }
     
     .table-page-header h1 {
@@ -255,7 +255,7 @@
   @media (max-width: 320px) {
     .projects-table th,
     .projects-table td {
-      padding: 0.5rem;
+      padding: 0px;
     }
     
     .table-btn {

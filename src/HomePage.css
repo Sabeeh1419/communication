@@ -119,6 +119,10 @@
   }
   
   @media (max-width: 768px) {
+
+    .cta-button.secondary {
+        padding: 6px 10px;
+      }
     .hero-section {
       flex-direction: column;
       text-align: center;

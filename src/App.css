@@ -112,6 +112,94 @@
   text-decoration: none;
 }
 
+.small-nav {
+  position: relative;
+  background: transparent;
+  padding: 1rem;
+}
+
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.menu-toggle {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* Navigation Overlay (Hidden by default, slides in from right) */
+.nav-overlay {
+  position: fixed;
+  top: 0;
+  right: -50%; /* Initially hidden */
+  width: 50%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 2rem;
+  transition: right 0.3s ease-in-out; /* Smooth sliding effect */
+  z-index: 1000;
+}
+
+/* When menu is open, slide into view */
+.nav-overlay.open {
+  right: 0;
+}
+
+.nav-menu {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.close-menu {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.nav-links-mobile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.nav-links-mobile .nav-link {
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-links-mobile .nav-link:hover {
+  color: red;
+}
+
+
 @media (max-width: 768px) {
   .nav-links {
     gap: 1rem;
