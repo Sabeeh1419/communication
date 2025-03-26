@@ -18,7 +18,7 @@ function SmallScreenNav() {
           <button className="close-menu" onClick={() => setMenuOpen(false)}>✖</button>
           <div className="nav-links-mobile">
             <Link to="/" className="nav-link" onClick={() => setMenuOpen(false)}>Home</Link>
-            <Link to="/projects" className="nav-link" onClick={() => setMenuOpen(false)}>Projects</Link>
+            <Link to="/projects" className="nav-link" onClick={() => setMenuOpen(false)}>Add Projects</Link>
             <Link to="/projects-table" className="nav-link" onClick={() => setMenuOpen(false)}>Data View</Link>
           </div>
         </div>
