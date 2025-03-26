@@ -223,17 +223,20 @@
       padding: 0.6rem 1rem;
       font-size: 0.9rem;
     }
+    .projects-table-container{
+        padding: 0rem;
+    }
     
     .projects-table {
-      min-width: 600px;
+      min-width: 500px;
     }
     
     .projects-table th {
-      padding: 0.75rem;
+      padding: 0.7rem;
     }
     
     .projects-table td {
-      padding: 0.75rem;
+      padding: 0.7rem;
     }
   }
   
